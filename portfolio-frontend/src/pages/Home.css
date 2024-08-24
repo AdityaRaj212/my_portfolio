@@ -1,0 +1,120 @@
+/* Background Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #1c1c1c 30%, #333 70%);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+/* Text and Content */
+.home-content {
+    /* max-width: 600px; */
+    z-index: 1;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #00ff99;
+    /* animation: textGlow 1.5s ease-in-out infinite; */
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+    }
+}
+
+.intro-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.explore-button, .contact-button {
+    background-color: #00ff99;
+    color: #121212;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover, .contact-button:hover {
+    background-color: #00cc66;
+    transform: scale(1.1);
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links .social-img {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+    margin: 0 1rem;
+}
+
+.social-links .social-img:hover {
+    transform: scale(1.2);
+}
+
+/* Image Effects */
+.home-image {
+    padding: 2rem;
+    z-index: 1;
+}
+
+.home-image img {
+    max-width: 15rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
